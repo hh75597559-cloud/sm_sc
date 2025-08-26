@@ -10,14 +10,14 @@
 
 ---
 
-## 👨‍💻 팀원 및 역할
+## 👨‍💻 팀원
 
-| 이름 | 담당 역할 |
+| 이름 |  학번 |
 |:----:|:----------|
-| 손형 | Backend / DB |
-| 신영 | Frontend / UI |
-| 문건 | AI 모델 연동 / RAG |
-| 김진 | 문서화 / 테스트 |
+| 박수현 | 202321561 |
+| 박세현 |  |
+| 유태건 |  |
+
 
 ---
 
@@ -87,16 +87,15 @@
 - 각 공정은 **Graphviz 다이어그램**으로 단계별 시각화  
 
 ---
-
 ## 🛠 개발환경 및 개발도구
 
-- **협업도구** : GitHub, ERD Cloud  
-- **개발도구** : IntelliJ, VS Code  
-- **프로그래밍 언어** : Python 3.9+, Java, JavaScript, HTML5, CSS, SQL  
-- **Database** : MySQL  
-- **Framework** : Streamlit, Spring Boot, MyBatis, Bootstrap  
-- **AI/ML** : LangChain, OpenAI API, Google Gemini API  
+- **협업도구** : GitHub  
+- **개발도구** : VS Code, Streamlit CLI  
+- **프로그래밍 언어** : Python 3.9+  
+- **Framework / Library** : Streamlit, LangChain  
+- **LLM API** : OpenAI API, Google Gemini API  
 - **Vector DB** : FAISS  
+- **문서 처리** : PyPDFLoader (langchain_community)  
 
 ---
 
