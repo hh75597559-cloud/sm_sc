@@ -59,8 +59,8 @@
 - 강점      : 다양한 입력 채널로 몰입형 학습 경험 제공
   
 📊 공정 프로세스 시각화
+<img width="1169" height="78" alt="image" src="https://github.com/user-attachments/assets/b30acdd8-ea46-40bb-af5d-260e27b5ef1a" />
 
-Mask Pattern ➜ Etch (RIE/ICP) ➜ Endpoint Detect ➜ Resist Strip ➜ Clean
 
 ---
 
