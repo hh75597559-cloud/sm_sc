@@ -59,6 +59,9 @@
 - 강점      : 다양한 입력 채널로 몰입형 학습 경험 제공
   
 📊 공정 프로세스 시각화
+
+카드 기반 시각화를 통해 각 공정의 진행 과정을 단계적으로 쉽게 파악할 수 있습니다.
+
 <img width="1169" height="78" alt="image" src="https://github.com/user-attachments/assets/b30acdd8-ea46-40bb-af5d-260e27b5ef1a" />
 
 
