@@ -60,14 +60,8 @@
   
 📊 공정 프로세스 시각화
 
-각 반도체 공정 단계는 가로 스크롤 카드 형식으로 시각화되어, 한눈에 흐름을 파악할 수 있습니다.
-
-예시:
-
 Mask Pattern ➜ Etch (RIE/ICP) ➜ Endpoint Detect ➜ Resist Strip ➜ Clean
 
-
-✅ 이렇게 박스로 구분된 단계별 흐름을 통해 학습자가 직관적으로 공정 순서를 이해할 수 있습니다.
 ---
 
 ### 1️⃣ 포토리소그래피 (Photolithography)
