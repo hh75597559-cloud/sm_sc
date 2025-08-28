@@ -10,13 +10,11 @@
 **복잡한 반도체 공정, 누구나 따라가는 학습 여정으로.**  
 **PDF 하나로 시작해 RAG·퀴즈·멀티모달로 완성하는 AI 튜터.**
 
-이 프로젝트는 Streamlit + LangChain 을 기반으로 반도체 공정 학습을 보다 직관적이고 체계적으로 지원하기 위해 제작되었습니다.
-사용자는 PDF 학습 자료 업로드 → 벡터 검색 기반 Q&A → 단계별 공정 학습 → 랜덤 문제 풀이까지
-하나의 흐름 속에서 자율적이고 몰입감 있는 학습 경험을 얻을 수 있습니다.  
-
-
-
-
+Streamlit + LangChain 기반의 반도체 공정 학습 지원 애플리케이션입니다.
+PDF 학습 자료를 업로드하면 텍스트를 분할·벡터화(FAISS)하여 RAG 파이프라인(OpenAI/Gemini)을 통해 질의응답을 수행하고, 답변과 함께 출처를 제공합니다.
+각 공정은 개요·핵심 포인트·단계 다이어그램으로 구조화되어 있으며, 동일 형식으로 페이지를 구성해 흐름 파악과 비교 학습이 쉽습니다.
+학습 평가는 난이도 선택형 랜덤 문제와 간단 해설, 진도율 표시로 이루어져 이해 수준을 정량적으로 확인할 수 있습니다.
+전체 학습 흐름은 자료 업로드 → RAG 질의응답 → 단계별 학습 → 퀴즈 평가로 설계되어, 반복 가능한 자기주도 학습 사이클을 제공합니다.
 
 ---                                  
 
@@ -151,16 +149,16 @@ GOOGLE_API_KEY=AIza-xxxx
 
   <!-- Row 2: Titles -->
   <tr>
-    <td align="center" width="25%" style="font-weight:700;font-size:16px;padding:6px 4px;">맞춤형 학습 경험</td>
-    <td align="center" width="25%" style="font-weight:700;font-size:16px;padding:6px 4px;">멀티모달 입력</td>
-    <td align="center" width="25%" style="font-weight:700;font-size:16px;padding:6px 4px;">학습 진도 관리</td>
+    <td align="center" width="25%" style="font-weight:700;font-size:16px;padding:6px 4px;">멀티모달-음성인식&이미지 업로드</td>
+    <td align="center" width="25%" style="font-weight:700;font-size:16px;padding:6px 4px;">멀티모달-카메라촬영</td>
+    <td align="center" width="25%" style="font-weight:700;font-size:16px;padding:6px 4px;">멀티모달-챗봇</td>
     <td align="center" width="25%" style="font-weight:700;font-size:16px;padding:6px 4px;">단계별 카드</td>
   </tr>
   <!-- Row 2: Images -->
   <tr>
-    <td align="center"><img src="https://github.com/user-attachments/assets/428b2440-73c2-41d4-9db9-2c4ee0be72ac" alt="맞춤형 학습 경험" width="230"></td>
-    <td align="center"><img src="https://github.com/user-attachments/assets/cad23eaf-626a-435d-9a4c-365897cacd3c" alt="멀티모달 입력" width="230"></td>
-    <td align="center"><img src="https://github.com/user-attachments/assets/d591cbe8-68fb-47c5-bf79-a3a1cba5fd68" alt="학습 진도 관리" width="230"></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/428b2440-73c2-41d4-9db9-2c4ee0be72ac" alt="멀티모달-음성인식&이미지 업로드" width="230"></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/cad23eaf-626a-435d-9a4c-365897cacd3c" alt="멀티모달-카메라촬영" width="230"></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/d591cbe8-68fb-47c5-bf79-a3a1cba5fd68" alt="멀티모달-챗봇" width="230"></td>
     <td align="center"><img src="https://github.com/user-attachments/assets/b30acdd8-ea46-40bb-af5d-260e27b5ef1a" alt="단계별 카드" width="230"></td>
   </tr>
 </table>
@@ -222,6 +220,58 @@ GOOGLE_API_KEY=AIza-xxxx
 
 ✅ **시각화**  
 - 각 공정은 **Graphviz 다이어그램**으로 단계별 시각화  
+---
+details> <summary><b>🔧 RAG 초기화 (ConversationalRetrievalChain) — 클릭하여 펼치기</b></summary>
+# RAG 초기화 (README 예제)
+import streamlit as st
+from langchain.chains import ConversationalRetrievalChain
+from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+from LLM import get_llm_backend, get_chat_llm
+
+st.subheader("질의응답 (RAG)")
+
+if "vectorstore" not in st.session_state:
+    st.info("임베딩 자료가 없습니다. PDF 업로드 → 임베딩 생성 후 이용하세요.")
+else:
+    # LLM 선택(OpenAI/Gemini) 및 생성
+    if "qa_chain" not in st.session_state:
+        backend, model = get_llm_backend()             # 예: ("openai", "gpt-4o-mini")
+        llm = get_chat_llm(backend=backend, model=model, temperature=0.2)
+        retriever = st.session_state.vectorstore.as_retriever(search_kwargs={"k": 4})
+
+        # PDF 우선 답변 프롬프트
+        prompt = ChatPromptTemplate.from_messages([
+            ("system",
+             "당신의 1차 정보원은 업로드된 PDF입니다. "
+             "가능하면 PDF 근거를 우선하여 답하고, 부족하면 일반지식으로 보완하되 그 사실을 한 문장으로 표시하십시오. "
+             "항상 정중한 한국어(존댓말)로 답하십시오."),
+            MessagesPlaceholder(variable_name="chat_history"),
+            ("human", "{question}")
+        ])
+
+        st.session_state.qa_chain = ConversationalRetrievalChain.from_llm(
+            llm=llm,
+            retriever=retriever,
+            return_source_documents=True,
+            combine_docs_chain_kwargs={"prompt": prompt},
+        )
+        st.session_state.llm = llm
+        st.session_state.retriever = retriever
+        st.session_state.qa_mode = "crc"    # CRC 사용 플래그
+
+</details> ::contentReference[oaicite:0]{index=0}
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 # 🗂 디렉토리 구조 (Directory Tree)
