@@ -65,6 +65,9 @@
 
 <img width="1169" height="78" alt="image" src="https://github.com/user-attachments/assets/b30acdd8-ea46-40bb-af5d-260e27b5ef1a" />
 
+## 🎥 시연 영상 (Demo Video)
+
+[![시연 영상 보기](https://img.shields.io/badge/YouTube-시연영상-red?logo=youtube&logoColor=white)](https://youtube.com/예시링크)
 
 ---
 
