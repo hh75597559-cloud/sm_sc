@@ -235,7 +235,7 @@ if "vectorstore" not in st.session_state:
 else:
     # LLM 선택(OpenAI/Gemini) 및 생성
     if "qa_chain" not in st.session_state:
-        backend, model = get_llm_backend()             # 예: ("openai", "gpt-4o-mini")
+        backend, model = get_llm_backend()  # 예: ("openai", "gpt-4o-mini")
         llm = get_chat_llm(backend=backend, model=model, temperature=0.2)
         retriever = st.session_state.vectorstore.as_retriever(search_kwargs={"k": 4})
 
@@ -249,15 +249,18 @@ else:
             ("human", "{question}")
         ])
 
+        # Conversational RAG 체인 구성
         st.session_state.qa_chain = ConversationalRetrievalChain.from_llm(
             llm=llm,
             retriever=retriever,
             return_source_documents=True,
             combine_docs_chain_kwargs={"prompt": prompt},
         )
+
+        # 핸들 저장
         st.session_state.llm = llm
         st.session_state.retriever = retriever
-        st.session_state.qa_mode = "crc"    # CRC 사용 플래그
+        st.session_state.qa_mode = "crc"  # CRC 사용 플래그
 ---
 # 🗂 디렉토리 구조 (Directory Tree)
 
