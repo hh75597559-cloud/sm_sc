@@ -12,10 +12,6 @@
 
 ## 🚀 시작하기
 스트림잇 주소
-### 1. 설치
-bash
-git clone https://github.com/사용자명/sm_sc.git
-cd sm_sc/project
 
 페이지 사진
 
