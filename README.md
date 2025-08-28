@@ -175,7 +175,7 @@ cd sm_sc/project
 [![시연 영상 보기](https://img.youtube.com/vi/uW6cQvnM6xE/hqdefault.jpg)](https://youtu.be/uW6cQvnM6xE "YouTube로 이동")
 
 ---
-
+# 📚 반도체 학습 모듈 개요
 ### 1️⃣ 포토리소그래피 (Photolithography)
 - **키워드** : 노광, 현상, 해상도 공식 (R = k1·λ/NA)  
 - **설명** : 웨이퍼 표면에 감광막(PR)을 바르고 노광/현상 과정을 거쳐 미세 패턴을 형성하는 공정  
