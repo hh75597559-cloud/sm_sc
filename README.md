@@ -10,6 +10,13 @@
 사용자는 PDF 학습 자료 업로드 → 벡터 검색 기반 Q&A → 단계별 공정 학습 → 랜덤 문제 풀이까지
 하나의 흐름 속에서 자율적이고 몰입감 있는 학습 경험을 얻을 수 있습니다.                          
 
+## 🚀 시작하기
+스트림잇 주소
+### 1. 설치
+```bash
+git clone https://github.com/사용자명/sm_sc.git
+cd sm_sc/project
+
 페이지 사진
 
 ---                                  
@@ -224,10 +231,3 @@ C:.
 │           MyLCH.cpython-310.pyc
 ```
 ---
-
-## 🚀 시작하기
-스트림잇 주소
-### 1. 설치
-```bash
-git clone https://github.com/사용자명/sm_sc.git
-cd sm_sc/project
