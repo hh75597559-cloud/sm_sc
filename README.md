@@ -60,7 +60,7 @@ OPENAI_API_KEY=sk-xxxx
 Google Gemini 사용 시
 GOOGLE_API_KEY=AIza-xxxx
 
- 🏗 아키텍처 (Architecture)
+# 🏗 아키텍처 (Architecture)
 
 app.py: 네비게이션/사이드바(임베딩 생성)·페이지 라우팅
 
