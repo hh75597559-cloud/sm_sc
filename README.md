@@ -1,29 +1,23 @@
-                                                            # 🧪 반도체 공정 학습 튜터 (Semiconductor Process Tutor)
+ # 🧪 반도체 공정 학습 튜터 (Semiconductor Process Tutor)
 
-                                  ![Streamlit](https://img.shields.io/badge/Framework-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
-                                  ![LangChain](https://img.shields.io/badge/LLM-LangChain-blue?logo=chainlink&logoColor=white)
-                                  ![Python](https://img.shields.io/badge/Python-3.9%2B-yellow?logo=python&logoColor=white)
-
-
-                                  📘 AI 기반 반도체 공정 학습 지원 플랫폼
-                                  이 프로젝트는 Streamlit + LangChain 을 기반으로 반도체 공정 학습을 보다 직관적이고 체계적으로 지원하기 위해 제작되었습니다.
-                                  사용자는 PDF 학습 자료 업로드 → 벡터 검색 기반 Q&A → 단계별 공정 학습 → 랜덤 문제 풀이까지
-                                  하나의 흐름 속에서 자율적이고 몰입감 있는 학습 경험을 얻을 수 있습니다.                          
+![Streamlit](https://img.shields.io/badge/Framework-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+![LangChain](https://img.shields.io/badge/LLM-LangChain-blue?logo=chainlink&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.9%2B-yellow?logo=python&logoColor=white)
 
 
+📘 AI 기반 반도체 공정 학습 지원 플랫폼
+이 프로젝트는 Streamlit + LangChain 을 기반으로 반도체 공정 학습을 보다 직관적이고 체계적으로 지원하기 위해 제작되었습니다.
+사용자는 PDF 학습 자료 업로드 → 벡터 검색 기반 Q&A → 단계별 공정 학습 → 랜덤 문제 풀이까지
+하나의 흐름 속에서 자율적이고 몰입감 있는 학습 경험을 얻을 수 있습니다.                          
 
-                                  사진
+페이지 사진
 
-
-
-
-
-                                  
 ---                                  
 
 ## 👨‍💻 팀원
 
 | 이름 |  학번 |
+
 | 유태건 | 시스템반도체공학과 | 202321562
 | 박세현 | 시스템반도체공학과 | 202321571
 | 박수현 | 시스템반도체공학과 | 202321561
