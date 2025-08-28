@@ -221,8 +221,7 @@ GOOGLE_API_KEY=AIza-xxxx
 ✅ **시각화**  
 - 각 공정은 **Graphviz 다이어그램**으로 단계별 시각화  
 ---
-
-# RAG 초기화 (요약)
+# RAG 초기화 
 import streamlit as st
 from langchain.chains import ConversationalRetrievalChain
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -249,10 +248,6 @@ else:
             ("human", "{question}")
         ])
 
-        # ⬇️ 아래 '전체 코드 보기'를 펼치면 이어지는 초기화 코드가 나옵니다.
-<details> <summary><b>전체 코드 보기 (클릭하여 펼치기)</b></summary>
-python
-코드 복사
         st.session_state.qa_chain = ConversationalRetrievalChain.from_llm(
             llm=llm,
             retriever=retriever,
@@ -262,7 +257,7 @@ python
         st.session_state.llm = llm
         st.session_state.retriever = retriever
         st.session_state.qa_mode = "crc"    # CRC 사용 플래그
-</details> ::contentReference[oaicite:0]{index=0}
+
 ---
 # 🗂 디렉토리 구조 (Directory Tree)
 
