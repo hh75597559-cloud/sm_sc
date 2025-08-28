@@ -222,6 +222,7 @@ C:.
 │   \---__pycache__
 │           LLM.cpython-310.pyc
 │           MyLCH.cpython-310.pyc
+```
 ---
 
 ## 🚀 시작하기
