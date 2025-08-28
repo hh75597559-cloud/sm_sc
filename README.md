@@ -1,25 +1,82 @@
-# 🧪 반도체 공정 학습 튜터 (Semiconductor Process Tutor)
+                                                            # 🧪 반도체 공정 학습 튜터 (Semiconductor Process Tutor)
 
-![Streamlit](https://img.shields.io/badge/Framework-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
-![LangChain](https://img.shields.io/badge/LLM-LangChain-blue?logo=chainlink&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.9%2B-yellow?logo=python&logoColor=white)
+                                  ![Streamlit](https://img.shields.io/badge/Framework-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+                                  ![LangChain](https://img.shields.io/badge/LLM-LangChain-blue?logo=chainlink&logoColor=white)
+                                  ![Python](https://img.shields.io/badge/Python-3.9%2B-yellow?logo=python&logoColor=white)
 
-> 📘 **Streamlit + LangChain 기반 반도체 공정 학습 보조 애플리케이션**  
-> 업로드한 PDF 학습 자료를 **벡터 검색 기반 질의응답(RAG)**으로 활용하고,  
-> 📊 **공정별 개요 · 핵심 포인트 · 단계별 다이어그램 · 질의응답**을 통해 쉽게 학습할 수 있습니다.
 
----
+                                  📘 AI 기반 반도체 공정 학습 지원 플랫폼
+                                  이 프로젝트는 Streamlit + LangChain 을 기반으로 반도체 공정 학습을 보다 직관적이고 체계적으로 지원하기 위해 제작되었습니다.
+                                  사용자는 PDF 학습 자료 업로드 → 벡터 검색 기반 Q&A → 단계별 공정 학습 → 랜덤 문제 풀이까지
+                                  하나의 흐름 속에서 자율적이고 몰입감 있는 학습 경험을 얻을 수 있습니다.                          
+
+
+
+                                  사진
+
+
+
+
+
+                                  
+---                                  
 
 ## 👨‍💻 팀원
 
 | 이름 |  학번 |
-|:----:|:----------|
-| 유태건 | 202321562 |
-| 박세현 | 202321571 |
-| 박수현 | 202321561 |
-
+| 유태건 | 시스템반도체공학과 | 202321562
+| 박세현 | 시스템반도체공학과 | 202321571
+| 박수현 | 시스템반도체공학과 | 202321561
 
 ---
+## 🛠 개발환경 및 개발도구
+
+- **협업도구** : GitHub  
+- **개발도구** : VS Code, Streamlit CLI  
+- **프로그래밍 언어** : Python 3.10 
+- **Framework / Library** : Streamlit, LangChain  
+- **LLM API** : OpenAI API, Google Gemini API  
+- **Vector DB** : FAISS  
+- **문서 처리** : PyPDFLoader (langchain_community)  
+
+Installation
+# 1) 프로젝트 클론
+git clone https://github.com/사용자명/semiconductor-tutor.git
+cd semiconductor-tutor/project
+
+# 2) 가상환경 (권장)
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS/Linux
+source .venv/bin/activate
+
+# 3) 의존성 설치
+pip install -r requirements.txt
+# 또는 (요약)
+# pip install streamlit langchain langchain-community langchain-openai langchain-google-genai \
+#             faiss-cpu pypdf python-dotenv google-generativeai openai pillow faster-whisper
+
+# 4) 실행
+streamlit run app.py
+
+# 5) Environment Variables (.env 권장)
+# OpenAI 사용 시
+OPENAI_API_KEY=sk-xxxx
+# Google Gemini 사용 시
+GOOGLE_API_KEY=AIza-xxxx
+
+ 🏗 아키텍처 (Architecture)
+
+app.py: 네비게이션/사이드바(임베딩 생성)·페이지 라우팅
+
+LLM.py: 백엔드 선택, RAG 유틸, 퀴즈/채점 파서, 멀티모달 질의, STT/TTS 헬퍼
+
+1~8.py: 공정별 학습(개요/핵심/가로스크롤 프로세스/진도관리/RAG/퀴즈)
+
+9.py: 접근성+ (음성/카메라/이미지 → 멀티모달 질의)
+
+
 
 ✨ 주요 기능
 
@@ -124,20 +181,57 @@
 - 각 공정은 **Graphviz 다이어그램**으로 단계별 시각화  
 
 ---
-## 🛠 개발환경 및 개발도구
-
-- **협업도구** : GitHub  
-- **개발도구** : VS Code, Streamlit CLI  
-- **프로그래밍 언어** : Python 3.9+  
-- **Framework / Library** : Streamlit, LangChain  
-- **LLM API** : OpenAI API, Google Gemini API  
-- **Vector DB** : FAISS  
-- **문서 처리** : PyPDFLoader (langchain_community)  
+🗂 디렉토리 구조 (Directory Tree)
+C:.
+|   .env
+|   .gitignore
+|   myllm.zip
+|   requirements.txt
+|
++---.idea
+|   |   .gitignore
+|   |   misc.xml
+|   |   modules.xml
+|   |   myproject.iml
+|   |   sm_sc.iml
+|   |   vcs.xml
+|   |   workspace.xml
+|   |
+|   \---inspectionProfiles
+|           profiles_settings.xml
+|           Project_Default.xml
+|
++---data
++---myllm
+|       Myapi.py
+|       __init__.py
+|
++---project
+|   |   1.py
+|   |   2.py
+|   |   3.py
+|   |   4.py
+|   |   5.py
+|   |   6.py
+|   |   7.py
+|   |   8.py
+|   |   9.py
+|   |   app.py
+|   |   cate.py
+|   |   LLM.py
+|   |   main.py
+|   |
+|   \---__pycache__
+|           LLM.cpython-310.pyc
+|
+\---__pycache__
+        LLM.cpython-310.pyc
+        MyLCH.cpython-310.pyc
 
 ---
 
 ## 🚀 시작하기
-
+스트림잇 주소
 ### 1. 설치
 ```bash
 git clone https://github.com/사용자명/sm_sc.git
