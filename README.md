@@ -254,6 +254,10 @@ else:
 ```
 **음성 인식 및 오디오 파일 생성**
 ```
+from typing import Optional
+import os
+import openai
+
 def speak_text(text: str, filename: str = "tts_output.mp3") -> Optional[str]:
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key or openai is None:
