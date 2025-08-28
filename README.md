@@ -223,11 +223,6 @@ PDF 학습 자료를 업로드하면 텍스트를 분할·벡터화(FAISS)하여
 **RAG 초기화**
 
 ```python
-import streamlit as st
-from langchain.chains import ConversationalRetrievalChain
-from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
-from LLM import get_llm_backend, get_chat_llm
-
 st.subheader("질의응답 (RAG)")
 
 if "vectorstore" not in st.session_state:
@@ -257,13 +252,8 @@ else:
         st.session_state.retriever = retriever
         st.session_state.qa_mode = "crc"  # CRC 사용 플래그
 ```
-**음석 인식 및 오디오 파일 생성**
+**음성 인식 및 오디오 파일 생성**
 ```
-# 🎤 TTS: 음성 합성 (OpenAI)
-from typing import Optional
-import os
-import openai
-
 def speak_text(text: str, filename: str = "tts_output.mp3") -> Optional[str]:
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key or openai is None:
@@ -271,7 +261,7 @@ def speak_text(text: str, filename: str = "tts_output.mp3") -> Optional[str]:
     try:
         client = openai.OpenAI(api_key=api_key)
         resp = client.audio.speech.create(
-            model="gpt-4o-mini-tts",  # 필요에 따라 tts-1 계열 등으로 변경 가능
+            model="gpt-4o-mini-tts", 
             voice="alloy",
             input=text,
         )
@@ -285,11 +275,6 @@ def speak_text(text: str, filename: str = "tts_output.mp3") -> Optional[str]:
 ```
 **유사도 판별**
 ```
-# 🧠 텍스트 유사도 판별 유틸 (Jaccard + SequenceMatcher)
-import re
-import difflib
-from typing import Iterable
-
 _STOPWORDS: set[str] = {
     "the","a","an","of","and","to","in","port","on","for","with","by","at","from","is","are","was","were","be","as",
     "및","과","와","에서","으로","으로써","에","의","를","을","은","는","이다","한다","하는","또는",
