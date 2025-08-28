@@ -47,9 +47,9 @@ source .venv/bin/activate
 
 4) 의존성 설치
 
- pip install -r requirements.txt
- or
- pip install streamlit langchain langchain-community langchain-openai langchain-google-genai \
+   pip install -r requirements.txt
+    or
+   pip install streamlit langchain langchain-community langchain-openai langchain-google-genai \
             faiss-cpu pypdf python-dotenv google-generativeai openai pillow faster-whisper
 
 5) 실행
