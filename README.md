@@ -33,31 +33,31 @@
 - **Vector DB** : FAISS  
 - **문서 처리** : PyPDFLoader (langchain_community)  
 
-Installation
-# 1) 프로젝트 클론
+# Installation
+1) 프로젝트 클론
 git clone https://github.com/사용자명/semiconductor-tutor.git
 cd semiconductor-tutor/project
 
-# 2) 가상환경 (권장)
+2) 가상환경 (권장)
 python -m venv .venv
-# Windows
+ //Windows//
 .venv\Scripts\activate
-# macOS/Linux
+//macOS/Linux//
 source .venv/bin/activate
 
-# 3) 의존성 설치
+4) 의존성 설치
 pip install -r requirements.txt
-# 또는 (요약)
-# pip install streamlit langchain langchain-community langchain-openai langchain-google-genai \
-#             faiss-cpu pypdf python-dotenv google-generativeai openai pillow faster-whisper
+or
+pip install streamlit langchain langchain-community langchain-openai langchain-google-genai \
+            faiss-cpu pypdf python-dotenv google-generativeai openai pillow faster-whisper
 
-# 4) 실행
+5) 실행
 streamlit run app.py
 
-# 5) Environment Variables (.env 권장)
-# OpenAI 사용 시
+6) Environment Variables (.env 권장)
+OpenAI 사용 시
 OPENAI_API_KEY=sk-xxxx
-# Google Gemini 사용 시
+Google Gemini 사용 시
 GOOGLE_API_KEY=AIza-xxxx
 
  🏗 아키텍처 (Architecture)
