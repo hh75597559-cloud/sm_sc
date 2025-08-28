@@ -165,7 +165,7 @@ GOOGLE_API_KEY=AIza-xxxx
 
 ## 🎥 시연 영상 (Demo Video)
 
-[![시연 영상 보기](https://img.shields.io/badge/YouTube-시연영상-red?logo=youtube&logoColor=white)](https://youtube.com/예시링크)
+https://youtu.be/uW6cQvnM6xE
 
 ---
 
