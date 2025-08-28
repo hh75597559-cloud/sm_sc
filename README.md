@@ -42,27 +42,20 @@ PDF 학습 자료를 업로드하면 텍스트를 분할·벡터화(FAISS)하여
 1) 프로젝트 클론
 
 git clone https://github.com/Park11234/sm_sc.git
-
 cd sm_sc/project
 
 2) 가상환경 (권장)
       python -m venv .venv
-   
       //Windows//
-   
       .venv\Scripts\activate
-   
      //macOS/Linux//
-   
       source .venv/bin/activate
   
 
 4) 의존성 설치
 
    pip install -r requirements.txt
-
    or
-
    pip install streamlit langchain langchain-community langchain-openai langchain-google-genai \
             faiss-cpu pypdf python-dotenv google-generativeai openai pillow faster-whisper
 
@@ -72,11 +65,8 @@ cd sm_sc/project
 
 7) Environment Variables (.env 권장)
       OpenAI 사용 시
-   
       OPENAI_API_KEY=sk-xxxx
-   
       Google Gemini 사용 시
-   
       GOOGLE_API_KEY=AIza-xxxx
 
 # 🏗 아키텍처 (Architecture)
