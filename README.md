@@ -41,8 +41,8 @@ PDF 학습 자료를 업로드하면 텍스트를 분할·벡터화(FAISS)하여
 # Installation
 1) 프로젝트 클론
 
-git clone https://github.com/Park11234/sm_sc.git
-cd sm_sc/project
+    git clone https://github.com/Park11234/sm_sc.git
+    cd sm_sc/project
 
 2) 가상환경 (권장)
       python -m venv .venv
