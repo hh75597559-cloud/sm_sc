@@ -16,13 +16,12 @@
 
 ## 👨‍💻 팀원
 
-| 이름 |  학번 |
 
-| 유태건 | 시스템반도체공학과 | 202321562
+**| 유태건 | 시스템반도체공학과 | 202321562 |**
 
-| 박세현 | 시스템반도체공학과 | 202321571
+**| 박세현 | 시스템반도체공학과 | 202321571 |**
 
-| 박수현 | 시스템반도체공학과 | 202321561
+**| 박수현 | 시스템반도체공학과 | 202321561 |**
 
 ---
 ## 🛠 개발환경 및 개발도구
@@ -76,35 +75,35 @@ GOOGLE_API_KEY=AIza-xxxx
 
 # ✨ 주요 기능
 
-📘 공정 학습 모듈
+**📘 공정 학습 모듈**
 + 주요 특징 : 공정별 개요 · 핵심 포인트 학습 지원
 ! 세부 기능 : 단계별 프로세스 다이어그램
 !              공정별 핵심 포인트 정리
 !              학습 진도 관리 (완료율 표시)
 - 강점      : 시각적 이해도 향상, 자기주도 학습 가능
 
-🔎 Q&A (RAG)
+**🔎 Q&A (RAG)**
 + 주요 특징 : 업로드한 PDF 기반 지능형 질의응답
 ! 세부 기능 : FAISS 벡터 검색
 !              OpenAI/Gemini 응답 선택 및 생성
 !              출처 문서 표시
 - 강점      : 신뢰성 있는 학습자료 기반 답변 제공
 
-🎲 랜덤 문제 생성기
+**🎲 랜덤 문제 생성기**
 + 주요 특징 : 실습형 학습 강화
 ! 세부 기능 : 난이도 선택 (초급/고급)
 !              랜덤 문제 자동 생성
 !              학습 점검용 피드백 제공
 - 강점      : 시험 대비, 자기 점검 학습에 효과적
 
-🎯 맞춤형 학습 경험
+**🎯 맞춤형 학습 경험**
 + 주요 특징 : 학습자료 ↔ Q&A ↔ 문제풀이 선순환 구조
 ! 세부 기능 : 사용자가 선택한 학습자료 활용
 !              자율적 질문·답변 학습
 !              복습 및 시험 준비 최적화
 - 강점      : AI 기반 개인 맞춤 학습 경험 제공
 
-🎤 Q&A 확장 기능 (멀티모달 입력)
+**🎤 Q&A 확장 기능 (멀티모달 입력)**
 + 주요 특징 : 음성 / 이미지 / 카메라 / 채팅 입력 지원
 ! 세부 기능 : 음성 인식 → 질문/응답/음성 출력
 !              이미지 업로드 (공정 사진·도표)
@@ -112,7 +111,7 @@ GOOGLE_API_KEY=AIza-xxxx
 !              채팅 입력 (자유로운 질문)
 - 강점      : 다양한 입력 채널로 몰입형 학습 경험 제공
   
-📊 공정 프로세스 시각화
+**📊 공정 프로세스 시각화**
 
 카드 기반 시각화를 통해 각 공정의 진행 과정을 단계적으로 쉽게 파악할 수 있습니다.
 
@@ -177,53 +176,50 @@ GOOGLE_API_KEY=AIza-xxxx
 - 각 공정은 **Graphviz 다이어그램**으로 단계별 시각화  
 
 ---
-🗂 디렉토리 구조 (Directory Tree)
+# 🗂 디렉토리 구조 (Directory Tree)
 C:.
-|   .env
-|   .gitignore
-|   myllm.zip
-|   requirements.txt
-|
+│   .env
+│   .gitignore
+│   myllm.zip
+│   requirements.txt
+│
 +---.idea
-|   |   .gitignore
-|   |   misc.xml
-|   |   modules.xml
-|   |   myproject.iml
-|   |   sm_sc.iml
-|   |   vcs.xml
-|   |   workspace.xml
-|   |
-|   \---inspectionProfiles
-|           profiles_settings.xml
-|           Project_Default.xml
-|
+│   │   .gitignore
+│   │   misc.xml
+│   │   modules.xml
+│   │   myproject.iml
+│   │   sm_sc.iml
+│   │   vcs.xml
+│   │   workspace.xml
+│   │
+│   \---inspectionProfiles
+│           profiles_settings.xml
+│           Project_Default.xml
+│
 +---data
+│
 +---myllm
-|       Myapi.py
-|       __init__.py
-|
+│   │   Myapi.py
+│   │   __init__.py
+│
 +---project
-|   |   1.py
-|   |   2.py
-|   |   3.py
-|   |   4.py
-|   |   5.py
-|   |   6.py
-|   |   7.py
-|   |   8.py
-|   |   9.py
-|   |   app.py
-|   |   cate.py
-|   |   LLM.py
-|   |   main.py
-|   |
-|   \---__pycache__
-|           LLM.cpython-310.pyc
-|
-\---__pycache__
-        LLM.cpython-310.pyc
-        MyLCH.cpython-310.pyc
-
+│   │   1.py
+│   │   2.py
+│   │   3.py
+│   │   4.py
+│   │   5.py
+│   │   6.py
+│   │   7.py
+│   │   8.py
+│   │   9.py
+│   │   app.py
+│   │   cate.py
+│   │   LLM.py
+│   │   main.py
+│   │
+│   \---__pycache__
+│           LLM.cpython-310.pyc
+│           MyLCH.cpython-310.pyc
 ---
 
 ## 🚀 시작하기
