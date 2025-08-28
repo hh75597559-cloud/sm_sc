@@ -46,6 +46,7 @@ python -m venv .venv
 source .venv/bin/activate
 
 4) 의존성 설치
+
 pip install -r requirements.txt
 or
 pip install streamlit langchain langchain-community langchain-openai langchain-google-genai \
