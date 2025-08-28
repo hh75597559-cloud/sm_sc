@@ -121,6 +121,7 @@ PDF 학습 자료를 업로드하면 텍스트를 분할·벡터화(FAISS)하여
   - 카메라 촬영(실시간 전송)
   - 채팅 입력(자유로운 질문)
 - **강점**: 다양한 입력 채널을 통한 **몰입형 학습 경험** 제공
+            **학습 접근성**을 높여 장애 학생의 참여와 이해를 지원
 
 **📊 공정 프로세스 시각화**
 
@@ -255,6 +256,50 @@ else:
         st.session_state.llm = llm
         st.session_state.retriever = retriever
         st.session_state.qa_mode = "crc"  # CRC 사용 플래그
+```
+```
+**음석 인식 및 오디오 파일 생성**
+def speak_text(text: str, filename: str = "tts_output.mp3") -> Optional[str]:
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not api_key or openai is None:
+        return None
+    try:
+        client = openai.OpenAI(api_key=api_key)
+        resp = client.audio.speech.create(
+            model="gpt-4o-mini-tts",
+            voice="alloy",
+            input=text,
+        )
+        with open(filename, "wb") as f:
+            f.write(resp.read())
+        return filename
+    except Exception:
+        return None
+```
+```
+**유사도 판별**
+_STOPWORDS: set[str] = {
+    "the","a","an","of","and","to","in","port","on","for","with","by","at","from","is","are","was","were","be","as",
+    "및","과","와","에서","으로","으로써","에","의","를","을","은","는","이다","한다","하는","또는",
+}
+def _normalize_text(s: str) -> list[str]:
+    s = (s or "").lower()
+    s = re.sub(r"[^0-9a-z가-힣\s]", " ", s)
+    toks = [t for t in s.split() if t and t not in _STOPWORDS]
+    return toks
+def _jaccard(a: Iterable[str], b: Iterable[str]) -> float:
+    sa, sb = set(a), set(b)
+    if not sa or not sb:
+        return 0.0
+    return len(sa & sb) / len(sa | sb)
+def is_similar(q: str, p: str, jaccard_thr: float = 0.55, ratio_thr: float = 0.70) -> bool:
+    ta, tb = _normalize_text(q), _normalize_text(p)
+    if _jaccard(ta, tb) >= jaccard_thr:
+        return True
+    if difflib.SequenceMatcher(None, " ".join(ta), " ".join(tb)).ratio() >= ratio_thr:
+        return True
+    return False
+
 ```
 ---
 # 🗂 디렉토리 구조 (Directory Tree)
