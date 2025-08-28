@@ -48,14 +48,16 @@ source .venv/bin/activate
 4) 의존성 설치
 
    pip install -r requirements.txt
-    or
+
+   or
+
    pip install streamlit langchain langchain-community langchain-openai langchain-google-genai \
             faiss-cpu pypdf python-dotenv google-generativeai openai pillow faster-whisper
 
-5) 실행
+6) 실행
 streamlit run app.py
 
-6) Environment Variables (.env 권장)
+7) Environment Variables (.env 권장)
 OpenAI 사용 시
 OPENAI_API_KEY=sk-xxxx
 Google Gemini 사용 시
