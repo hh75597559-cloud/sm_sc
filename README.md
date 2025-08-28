@@ -19,7 +19,9 @@
 | 이름 |  학번 |
 
 | 유태건 | 시스템반도체공학과 | 202321562
+
 | 박세현 | 시스템반도체공학과 | 202321571
+
 | 박수현 | 시스템반도체공학과 | 202321561
 
 ---
@@ -56,7 +58,7 @@ source .venv/bin/activate
 
 6) 실행
  
-  streamlit run app.py
+    streamlit run app.py
 
 7) Environment Variables (.env 권장)
 OpenAI 사용 시
