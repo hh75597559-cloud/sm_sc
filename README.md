@@ -135,39 +135,39 @@ GOOGLE_API_KEY=AIza-xxxx
 <!-- ✅ 4 columns x 2 rows gallery for GitHub README -->
 <table>
   <tr>
-    <td align="center" width="25%">
-      <img src="https://github.com/user-attachments/assets/b0830e4e-b862-4ee0-90c6-a8032db32de9" alt="공정 학습 모듈" width="220"><br/>
-      
+    <td align="center" valign="top" width="25%">
+      <img src="https://github.com/user-attachments/assets/b0830e4e-b862-4ee0-90c6-a8032db32de9" alt="공정 학습 모듈" width="220" loading="lazy"><br/>
+      <b>공정 학습 모듈</b>
     </td>
-    <td align="center" width="25%">
-      <img src="https://github.com/user-attachments/assets/9f235334-be6d-480e-b4fc-019b38bccae9" alt="Q&A (RAG)" width="220"><br/>
-      
+    <td align="center" valign="top" width="25%">
+      <img src="https://github.com/user-attachments/assets/9f235334-be6d-480e-b4fc-019b38bccae9" alt="Q&A (RAG)" width="220" loading="lazy"><br/>
+      <b>Q&A (RAG)</b>
     </td>
-    <td align="center" width="25%">
-      <img src="https://github.com/user-attachments/assets/a4cfb0f8-1af0-45d9-ba01-462a9eab9f23" alt="랜덤 문제 생성기" width="220"><br/>
-  
+    <td align="center" valign="top" width="25%">
+      <img src="https://github.com/user-attachments/assets/a4cfb0f8-1af0-45d9-ba01-462a9eab9f23" alt="랜덤 문제 생성기" width="220" loading="lazy"><br/>
+      <b>랜덤 문제 생성기</b>
     </td>
-    <td align="center" width="25%">
-      <img src="https://github.com/user-attachments/assets/cbcd9717-deca-4de0-90d8-ef9150265932"alt="랜덤 문제 생성기" width="220"><br/>
-   
+    <td align="center" valign="top" width="25%">
+      <img src="https://github.com/user-attachments/assets/cbcd9717-deca-4de0-90d8-ef9150265932" alt="프로세스 시각화" width="220" loading="lazy"><br/>
+      <b>프로세스 시각화</b>
     </td>
   </tr>
   <tr>
-    <td align="center" width="25%">
-      <img src="https://github.com/user-attachments/assets/428b2440-73c2-41d4-9db9-2c4ee0be72ac" alt="맞춤형 학습 경험" width="220"><br/>
- 
+    <td align="center" valign="top" width="25%">
+      <img src="https://github.com/user-attachments/assets/428b2440-73c2-41d4-9db9-2c4ee0be72ac" alt="맞춤형 학습 경험" width="220" loading="lazy"><br/>
+      <b>맞춤형 학습 경험</b>
     </td>
-    <td align="center" width="25%">
-      <img src="https://github.com/user-attachments/assets/cad23eaf-626a-435d-9a4c-365897cacd3c" alt="맞춤형 학습 경험" width="220"><br/>
-    
+    <td align="center" valign="top" width="25%">
+      <img src="https://github.com/user-attachments/assets/cad23eaf-626a-435d-9a4c-365897cacd3c" alt="멀티모달 입력" width="220" loading="lazy"><br/>
+      <b>멀티모달 입력</b>
     </td>
-    <td align="center" width="25%">
-      <img src="https://github.com/user-attachments/assets/d591cbe8-68fb-47c5-bf79-a3a1cba5fd68" alt="맞춤형 학습 경험" width="220"><br/>
-    
+    <td align="center" valign="top" width="25%">
+      <img src="https://github.com/user-attachments/assets/d591cbe8-68fb-47c5-bf79-a3a1cba5fd68" alt="학습 진도 관리" width="220" loading="lazy"><br/>
+      <b>학습 진도 관리</b>
     </td>
-    <td align="center" width="25%">
-      <img src="https://github.com/user-attachments/assets/b30acdd8-ea46-40bb-af5d-260e27b5ef1a" alt="Q&A 확장 기능 (멀티모달 입력)" width="220"><br/>
-    
+    <td align="center" valign="top" width="25%">
+      <img src="https://github.com/user-attachments/assets/b30acdd8-ea46-40bb-af5d-260e27b5ef1a" alt="가로 스크롤 단계 카드" width="220" loading="lazy"><br/>
+      <b>단계별 카드</b>
     </td>
   </tr>
 </table>
