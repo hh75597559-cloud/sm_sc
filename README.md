@@ -259,6 +259,7 @@ else:
 ```
 **음석 인식 및 오디오 파일 생성**
 ```
+# 🎤 TTS: 음성 합성 (OpenAI)
 from typing import Optional
 import os
 import openai
@@ -280,10 +281,11 @@ def speak_text(text: str, filename: str = "tts_output.mp3") -> Optional[str]:
     except Exception:
         return None
 
+
 ```
 **유사도 판별**
 ```
-
+# 🧠 텍스트 유사도 판별 유틸 (Jaccard + SequenceMatcher)
 import re
 import difflib
 from typing import Iterable
@@ -312,7 +314,6 @@ def is_similar(q: str, p: str, jaccard_thr: float = 0.55, ratio_thr: float = 0.7
     if difflib.SequenceMatcher(None, " ".join(ta), " ".join(tb)).ratio() >= ratio_thr:
         return True
     return False
-
 ```
 ---
 # 🗂 디렉토리 구조 (Directory Tree)
