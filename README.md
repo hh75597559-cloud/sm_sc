@@ -88,7 +88,6 @@ GOOGLE_API_KEY=AIza-xxxx
   - 공정별 핵심 포인트 정리
   - 학습 진도 관리(완료율 표시)
 - **강점**: 시각적 이해도 향상, 자기주도 학습 가능
-<img width="720"  alt="image" src="https://github.com/user-attachments/assets/b0830e4e-b862-4ee0-90c6-a8032db32de9" />
 
 ### 🔎 Q&A (RAG)
 - **주요 특징**: 업로드한 PDF 기반 지능형 질의응답
@@ -97,7 +96,6 @@ GOOGLE_API_KEY=AIza-xxxx
   - **OpenAI/Gemini** 모델 응답 생성
   - **출처 문서 표시**
 - **강점**: 신뢰성 있는 학습자료 기반 답변 제공
-- <img width="1534" height="509" alt="image" src="https://github.com/user-attachments/assets/9f235334-be6d-480e-b4fc-019b38bccae9" />
 
 
 ### 🎲 랜덤 문제 생성기
@@ -107,8 +105,6 @@ GOOGLE_API_KEY=AIza-xxxx
   - **랜덤 문제 자동 생성**
   - **학습 점검용 피드백 제공**
 - **강점**: 시험 대비 및 자기 점검 학습에 효과적
-<img width="1383" height="701" alt="image" src="https://github.com/user-attachments/assets/a4cfb0f8-1af0-45d9-ba01-462a9eab9f23" />
-<img width="1522" height="846" alt="image" src="https://github.com/user-attachments/assets/cbcd9717-deca-4de0-90d8-ef9150265932" />
 
 
 ### 🎯 맞춤형 학습 경험
@@ -127,9 +123,7 @@ GOOGLE_API_KEY=AIza-xxxx
   - 카메라 촬영(실시간 전송)
   - 채팅 입력(자유로운 질문)
 - **강점**: 다양한 입력 채널을 통한 **몰입형 학습 경험** 제공
-<img width="730" height="759" alt="image" src="https://github.com/user-attachments/assets/428b2440-73c2-41d4-9db9-2c4ee0be72ac" />
-<img width="749" height="608" alt="image" src="https://github.com/user-attachments/assets/cad23eaf-626a-435d-9a4c-365897cacd3c" />
-<img width="755" height="717" alt="image" src="https://github.com/user-attachments/assets/d591cbe8-68fb-47c5-bf79-a3a1cba5fd68" />
+
 
 
 
@@ -137,7 +131,48 @@ GOOGLE_API_KEY=AIza-xxxx
 
 카드 기반 시각화를 통해 각 공정의 진행 과정을 단계적으로 쉽게 파악할 수 있습니다.
 
-<img width="1169" height="78" alt="image" src="https://github.com/user-attachments/assets/b30acdd8-ea46-40bb-af5d-260e27b5ef1a" />
+
+<!-- ✅ 4 columns x 2 rows gallery for GitHub README -->
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <img src="https://github.com/user-attachments/assets/b0830e4e-b862-4ee0-90c6-a8032db32de9" alt="공정 학습 모듈" width="220"><br/>
+      
+    </td>
+    <td align="center" width="25%">
+      <img src="https://github.com/user-attachments/assets/9f235334-be6d-480e-b4fc-019b38bccae9" alt="Q&A (RAG)" width="220"><br/>
+      
+    </td>
+    <td align="center" width="25%">
+      <img src="https://github.com/user-attachments/assets/a4cfb0f8-1af0-45d9-ba01-462a9eab9f23" alt="랜덤 문제 생성기" width="220"><br/>
+  
+    </td>
+    <td align="center" width="25%">
+      <img src="https://github.com/user-attachments/assets/cbcd9717-deca-4de0-90d8-ef9150265932"alt="랜덤 문제 생성기" width="220"><br/>
+   
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="25%">
+      <img src="https://github.com/user-attachments/assets/428b2440-73c2-41d4-9db9-2c4ee0be72ac" alt="맞춤형 학습 경험" width="220"><br/>
+ 
+    </td>
+    <td align="center" width="25%">
+      <img src="https://github.com/user-attachments/assets/cad23eaf-626a-435d-9a4c-365897cacd3c" alt="맞춤형 학습 경험" width="220"><br/>
+    
+    </td>
+    <td align="center" width="25%">
+      <img src="https://github.com/user-attachments/assets/d591cbe8-68fb-47c5-bf79-a3a1cba5fd68" alt="맞춤형 학습 경험" width="220"><br/>
+    
+    </td>
+    <td align="center" width="25%">
+      <img src="https://github.com/user-attachments/assets/b30acdd8-ea46-40bb-af5d-260e27b5ef1a" alt="Q&A 확장 기능 (멀티모달 입력)" width="220"><br/>
+    
+    </td>
+  </tr>
+</table>
+
+
 
 ## 🎥 시연 영상 (Demo Video)
 
