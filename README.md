@@ -162,7 +162,7 @@ GOOGLE_API_KEY=AIza-xxxx
 
 ## 🎥 시연 영상 (Demo Video)
 
-(https://img.youtube.com/vi/uW6cQvnM6xE/hqdefault.jpg)](https://youtu.be/uW6cQvnM6xE "YouTube로 이동")
+[![시연 영상 보기](https://img.youtube.com/vi/uW6cQvnM6xE/hqdefault.jpg)](https://youtu.be/uW6cQvnM6xE "YouTube로 이동")
 
 ---
 
