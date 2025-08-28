@@ -253,7 +253,8 @@ else:
         st.session_state.qa_mode = "crc"  # CRC 사용 플래그
 ```
 **음성 인식 및 오디오 파일 생성**
-```
+
+```python
 from typing import Optional
 import os
 import openai
@@ -278,7 +279,7 @@ def speak_text(text: str, filename: str = "tts_output.mp3") -> Optional[str]:
 
 ```
 **유사도 판별**
-```
+```python
 _STOPWORDS: set[str] = {
     "the","a","an","of","and","to","in","port","on","for","with","by","at","from","is","are","was","were","be","as",
     "및","과","와","에서","으로","으로써","에","의","를","을","은","는","이다","한다","하는","또는",
