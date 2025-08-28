@@ -88,7 +88,7 @@ GOOGLE_API_KEY=AIza-xxxx
   - 공정별 핵심 포인트 정리
   - 학습 진도 관리(완료율 표시)
 - **강점**: 시각적 이해도 향상, 자기주도 학습 가능
-<img width="300"  alt="image" src="https://github.com/user-attachments/assets/b0830e4e-b862-4ee0-90c6-a8032db32de9" />
+<img width="720"  alt="image" src="https://github.com/user-attachments/assets/b0830e4e-b862-4ee0-90c6-a8032db32de9" />
 
 ### 🔎 Q&A (RAG)
 - **주요 특징**: 업로드한 PDF 기반 지능형 질의응답
