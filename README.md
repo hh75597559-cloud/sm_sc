@@ -56,7 +56,7 @@ source .venv/bin/activate
 
 6) 실행
  
- streamlit run app.py
+  streamlit run app.py
 
 7) Environment Variables (.env 권장)
 OpenAI 사용 시
