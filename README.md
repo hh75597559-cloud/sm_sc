@@ -13,7 +13,7 @@
 ## 🚀 시작하기
 스트림잇 주소
 ### 1. 설치
-```bash
+bash
 git clone https://github.com/사용자명/sm_sc.git
 cd sm_sc/project
 
