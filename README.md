@@ -215,50 +215,49 @@ GOOGLE_API_KEY=AIza-xxxx
 - **키워드** : 평탄화, 디싱, 스크래치, 오버폴리시  
 - **설명** : 패드와 슬러리를 이용해 표면을 평탄화하여 다층 배선과 후속 공정의 기반을 마련  
 
-✅ **인터랙티브 Q&A (RAG)**  
+### 인터랙티브 Q&A (RAG)  
 - 업로드한 자료 기반으로 질문 → 답변 + 출처 문서 표시  
 
-✅ **시각화**  
+### 시각화  
 - 각 공정은 **Graphviz 다이어그램**으로 단계별 시각화  
 ---
 ## 주요 코드 
 **RAG 초기화**
+import streamlit as st
+from langchain.chains import ConversationalRetrievalChain
+from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+from LLM import get_llm_backend, get_chat_llm
 
-  import streamlit as st
-  from langchain.chains import ConversationalRetrievalChain
-  from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
-  from LLM import get_llm_backend, get_chat_llm
+st.subheader("질의응답 (RAG)")
 
-  st.subheader("질의응답 (RAG)")
+if "vectorstore" not in st.session_state:
+    st.info("임베딩 자료가 없습니다. PDF 업로드 → 임베딩 생성 후 이용하세요.")
+else:
+    # LLM 선택(OpenAI/Gemini) 및 생성
+    if "qa_chain" not in st.session_state:
+        backend, model = get_llm_backend()             # 예: ("openai", "gpt-4o-mini")
+        llm = get_chat_llm(backend=backend, model=model, temperature=0.2)
+        retriever = st.session_state.vectorstore.as_retriever(search_kwargs={"k": 4})
 
-  if "vectorstore" not in st.session_state:
-      st.info("임베딩 자료가 없습니다. PDF 업로드 → 임베딩 생성 후 이용하세요.")
-  else:
-      # LLM 선택(OpenAI/Gemini) 및 생성
-      if "qa_chain" not in st.session_state:
-          backend, model = get_llm_backend()             # 예: ("openai", "gpt-4o-mini")
-          llm = get_chat_llm(backend=backend, model=model, temperature=0.2)
-          retriever = st.session_state.vectorstore.as_retriever(search_kwargs={"k": 4})
+        # PDF 우선 답변 프롬프트
+        prompt = ChatPromptTemplate.from_messages([
+            ("system",
+             "당신의 1차 정보원은 업로드된 PDF입니다. "
+             "가능하면 PDF 근거를 우선하여 답하고, 부족하면 일반지식으로 보완하되 그 사실을 한 문장으로 표시하십시오. "
+             "항상 정중한 한국어(존댓말)로 답하십시오."),
+            MessagesPlaceholder(variable_name="chat_history"),
+            ("human", "{question}")
+        ])
 
-          # PDF 우선 답변 프롬프트
-          prompt = ChatPromptTemplate.from_messages([
-              ("system",
-               "당신의 1차 정보원은 업로드된 PDF입니다. "
-               "가능하면 PDF 근거를 우선하여 답하고, 부족하면 일반지식으로 보완하되 그 사실을 한 문장으로 표시하십시오. "
-               "항상 정중한 한국어(존댓말)로 답하십시오."),
-              MessagesPlaceholder(variable_name="chat_history"),
-              ("human", "{question}")
-          ])
-
-          st.session_state.qa_chain = ConversationalRetrievalChain.from_llm(
-              llm=llm,
-              retriever=retriever,
-              return_source_documents=True,
-              combine_docs_chain_kwargs={"prompt": prompt},
-          )
-          st.session_state.llm = llm
-          st.session_state.retriever = retriever
-          st.session_state.qa_mode = "crc"    # CRC 사용 플래그
+        st.session_state.qa_chain = ConversationalRetrievalChain.from_llm(
+            llm=llm,
+            retriever=retriever,
+            return_source_documents=True,
+            combine_docs_chain_kwargs={"prompt": prompt},
+        )
+        st.session_state.llm = llm
+        st.session_state.retriever = retriever
+        st.session_state.qa_mode = "crc"    # CRC 사용 플래그
 ---
 # 🗂 디렉토리 구조 (Directory Tree)
 
