@@ -40,8 +40,8 @@ PDF 학습 자료를 업로드하면 텍스트를 분할·벡터화(FAISS)하여
 
 # Installation
 1) 프로젝트 클론
-git clone https://github.com/사용자명/semiconductor-tutor.git
-cd semiconductor-tutor/project
+git clone https://github.com/Park11234/sm_sc.git
+cd sm_sc/project
 
 2) 가상환경 (권장)
 python -m venv .venv
@@ -121,9 +121,6 @@ GOOGLE_API_KEY=AIza-xxxx
   - 카메라 촬영(실시간 전송)
   - 채팅 입력(자유로운 질문)
 - **강점**: 다양한 입력 채널을 통한 **몰입형 학습 경험** 제공
-
-
-
 
 **📊 공정 프로세스 시각화**
 
