@@ -177,6 +177,8 @@ GOOGLE_API_KEY=AIza-xxxx
 
 ---
 # 🗂 디렉토리 구조 (Directory Tree)
+
+```plaintext
 C:.
 │   .env
 │   .gitignore
